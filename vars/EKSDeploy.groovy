@@ -9,7 +9,7 @@ def call (Map configMap){
         environment {
             COURSE = "Jenkins"
             appVersion = configMap.get("appVersion")
-            ACC_ID = "672945439745"
+            ACC_ID = "160885265516"
             PROJECT = configMap.get("project")
             COMPONENT = configMap.get("component")
             deploy_to = configMap.get("deploy_to")
@@ -28,7 +28,7 @@ def call (Map configMap){
             
             stage('Deploy') {
                 when{
-                    expression { expression { deploy_to == "dev" || deploy_to == "qa" }}
+                    expression { deploy_to == "dev" || deploy_to = "qa" || deploy_to = "qa" }
                 }
                 steps {
                     script{
